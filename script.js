@@ -6,8 +6,8 @@ import { Connection, PublicKey } from "https://cdn.jsdelivr.net/npm/@solana/web3
 const HELIUS_API_KEY = "4e2d8758-bf0e-473b-ae3c-c31bf809553c";
 const RPC_URL = "https://mainnet.helius-rpc.com/?api-key=b5dce25c-09db-45bd-ba9b-d2e2f16fc841";
 
-const SUPABASE_URL = "https://adgnomeyuqoaxtrhwjgk.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_sSJLo9gknOcDvo8VSH6_Og_5cj2lnpW";
+const SUPABASE_URL = "https://ryotqmtgifuqcmpmrsau.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_J8_w5B2Ivqcw2el12HdMfg_snjwGdSd";
 
 /* =============================
    INIT
