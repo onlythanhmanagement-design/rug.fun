@@ -13,7 +13,6 @@ const SUPABASE_ANON_KEY = "sb_publishable_J8_w5B2Ivqcw2el12HdMfg_snjwGdSd";
 // INIT CONNECTION
 // ================================
 const connection = new solanaWeb3.Connection(RPC_URL);
-const PublicKey = solanaWeb3.PublicKey;
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ================================
@@ -101,7 +100,7 @@ async function getHoldersCount(mint){
 // Âge du token via la première transaction
 async function getTokenAgeDays(mint){
   try{
-    const sigs = await connection.getSignaturesForAddress(new PublicKey(mint),{limit:1});
+    const sigs = await connection.getSignaturesForAddress(new solanaWeb3.PublicKey(mint),{limit:1});
     if(!sigs.length) return 0;
     return (Date.now()/1000 - sigs[0].blockTime)/86400;
   }catch(e){
