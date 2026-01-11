@@ -137,16 +137,15 @@ async function saveScan(mint, rugScore, fees, holders, ageDays){
   const verdict = getLabel(rugScore)[0];
   try{
     await supabase.from("scans").insert([{
-      id: generateUUID(),
-      mint,
-      rug_score: rugScore,
-      fees,
-      holders,
-      age_days: ageDays,
-      verdict
-    }]);
-  }catch(e){ console.error("Erreur insert Supabase:", e);}
-}
+  id: generateUUID(),
+  mint,
+  rug_score,
+  fees,
+  holders,
+  age_days,
+  verdict
+}]);
+
 
 async function loadRecentScans(){
   try{
